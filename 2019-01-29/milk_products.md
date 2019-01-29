@@ -79,7 +79,3 @@ ggslopegraph2(dataframe = milk_products_ranked,
 ```
 
 ![](milk_products_files/figure-markdown_github/unnamed-chunk-4-1.png)
-
-``` r
-ggsave("milk_plot.png", height = 8, width = 16, units = c("in"))
-```

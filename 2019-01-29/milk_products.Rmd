@@ -1,6 +1,8 @@
 ---
 title: "Tidy Tuesday 2019-01-29"
 output: "github_document"
+fig_width: 10
+fig_height: 5
 ---
 
 ```{r setup, include = FALSE}
@@ -65,7 +67,7 @@ milk_products_ranked <-
 ```
 
 ## Plot
-```{r message = FALSE}
+```{r message = FALSE, fig.height = 10, fig.width = 8}
             
 # colors for the plot lines: all grey except one green one to highlight yogurt      
 cols <- rep("#E1E1E1", 17)
@@ -87,7 +89,11 @@ ggslopegraph2(dataframe = milk_products_ranked,
         plot.margin = unit(c(1,1,1,1),"cm"),
         panel.background = element_rect(fill = "#F4F4F4"))
 
-ggsave("milk_plot.png", height = 8, width = 16, units = c("in"))
+```
+
+```{r, include = FALSE}
+
+ggsave("milk_plot_tall.png", height = 16, width = 10, units = c("in"))
 
 ```
 
